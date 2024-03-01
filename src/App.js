@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar } from './components/navbar';
+import HomeView from './components/views/HomeView';
+import LaunchesView from './components/views/LaunchesView';
+import RocketsView from './components/views/RocketsView';
+import ShipsView from './components/views/ShipsView';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import LaunchesContextProvider from './context/launchesContext';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <LaunchesContextProvider>
+          <Navbar/>
+            <Routes>
+              <Route path="/launches" element={<LaunchesView/>}/>
+              <Route path="/rockets" element={<RocketsView/>}/>
+              <Route path="/ships" element={<ShipsView/>}/>
+              <Route path="/" element={<HomeView/>}/>
+            </Routes>
+          </LaunchesContextProvider>
+      </Router>
     </div>
   );
 }
