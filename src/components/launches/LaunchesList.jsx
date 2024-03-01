@@ -1,13 +1,13 @@
-import LaunchesListItem from "./launchesListItem"
+import LaunchesListItem from "./launchesListItem";
 
-const LaunchesList = ({launches}) =>{
-
-    return (
+const LaunchesList = ({ launches }) => {
+  return (
     <div>
-        {launches.map(launch => (
-            <LaunchesListItem key={launch.id} launch={launch} />
-        ))}
+      {launches.map((launch) => (
+        <LaunchesListItem key={launch.id} launch={launch} />
+      ))}
     </div>
-    )
-}
-export default LaunchesList
+  );
+};
+
+export default LaunchesList;

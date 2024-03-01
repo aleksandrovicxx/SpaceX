@@ -18,7 +18,7 @@ export const initialState = {
                 loading: false,
                 launches: action.paylaod
             }
-        case 'FETCH_LAUNCHES_ERROR' :
+        case 'FETCH_LAUNCHES_FAILURE' :
             return {
                 ...state,
                 loading: false,
