@@ -12,17 +12,17 @@ export const initialState = {
                 loading: true,
                 error: null
             }
-        case 'FETCH_LAUNCHES_SUCCES' :
+        case 'FETCH_LAUNCHES_SUCCESS' :
             return {
                 ...state,
                 loading: false,
-                launches: action.paylaod
+                launches: action.payload
             }
         case 'FETCH_LAUNCHES_FAILURE' :
             return {
                 ...state,
                 loading: false,
-                error: action.paylaod
+                error: action.payload
             }
 
         default:
