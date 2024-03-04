@@ -1,0 +1,14 @@
+table {
+    color: wheat;
+    text-decoration: none;   
+    border: 1px solid wheat; 
+    margin-left: auto;
+    margin-right: auto;
+}
+table td{
+    border: 1px solid white;
+}
+.rocketsimg {
+    width: 500px;
+    height: auto;
+}
